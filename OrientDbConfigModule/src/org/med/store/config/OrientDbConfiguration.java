@@ -4,10 +4,13 @@
  */
 package org.med.store.config;
 
+import java.io.File;
 import java.util.Properties;
 import org.med.api.store.StoreConfiguration;
 import org.openide.filesystems.FileObject;
+import org.openide.filesystems.FileUtil;
 import org.openide.loaders.DataNode;
+import org.openide.modules.InstalledFileLocator;
 import org.openide.util.lookup.ServiceProvider;
 
 /**
@@ -26,7 +29,21 @@ public class OrientDbConfiguration implements StoreConfiguration{
     public Properties getProperties() {
         //FileObject fo = FileUtil.;
         //this.getClass().getClassLoader().getResourceAsStream(null).
-        return null;
+        File f = InstalledFileLocator.getDefault().locate("orientdb.properties", null, false);
+        
+        Properties p = null;
+        if ( f != null ) {
+            p = new Properties();
+            try {
+                FileObject fo = FileUtil.createData(f);
+                p.load(fo.getInputStream());
+            } catch(Exception ex) {
+                
+            }
+//            fo.getInputStream();
+//            p.put("FOUND", "File Found");
+        }
+        return p;
     }
     
 }
