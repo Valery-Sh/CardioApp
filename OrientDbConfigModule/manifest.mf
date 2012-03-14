@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+OpenIDE-Module: org.med.store.config
+OpenIDE-Module-Localizing-Bundle: org/med/store/config/Bundle.properties
+OpenIDE-Module-Specification-Version: 1.0
+
