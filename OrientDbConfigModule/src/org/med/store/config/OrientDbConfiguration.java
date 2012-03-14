@@ -20,11 +20,11 @@ import org.openide.util.lookup.ServiceProvider;
 @ServiceProvider(service=org.med.api.store.StoreConfiguration.class)
 public class OrientDbConfiguration implements StoreConfiguration{
 
-    @Override
+/*    @Override
     public DataNode getDataNode() {
         return null;
     }
-
+*/
     @Override
     public Properties getProperties() {
         //FileObject fo = FileUtil.;
@@ -40,8 +40,6 @@ public class OrientDbConfiguration implements StoreConfiguration{
             } catch(Exception ex) {
                 
             }
-//            fo.getInputStream();
-//            p.put("FOUND", "File Found");
         }
         return p;
     }

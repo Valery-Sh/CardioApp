@@ -5,13 +5,12 @@
 package org.med.api.store;
 
 import java.util.Properties;
-import org.openide.loaders.DataNode;
 
 /**
  *
  * @author Valery
  */
 public interface StoreConfiguration {
-    DataNode getDataNode();
+    //DataNode getDataNode();
     Properties getProperties();
 }
